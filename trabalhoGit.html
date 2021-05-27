@@ -7,30 +7,29 @@
 </head>
 <body>
     <script>
-/*1) cadastrarNotas() -> Retorna um vetor com 3 notas
-2) calculaMedia(notas) -> Retorna a média de um vetor de notas
-3) mostraMedia(media) -> Mostrar a média (com arredondamento de duas casas decimais) em um alert.
-
-function calcularMedia(n1,n2,n3) {
-            return  (n1 + n2 + n3) / 3
-        } 
-        let n1 = +prompt("digite a nota 1 aqui"),
-            n2 = +prompt("Digiote a nota 2 aqui"),
-            n3 = +prompt("Digite a nota 3 aqui")
+        let vetorNotas = []
+        let somaNotas = 0
         
-            console.log(calcularMedia(n1,n2,n3))*/
-            
-            
-            let media = 8.3
+        function notas() {
+            for(let i = 0; i < 3; i++){
+                let numero = +prompt(`Digite a ${[i+1]}ª nota do aluno`)
+                vetorNotas[i] = numero
+            }
+        } 
+        notas()
 
-            function mostrarMedia(media) {
-                alert(`Sua média é de: ${media.toFixed(2)}`)
-}
+        function calcularMedia(){
+            for (let i = 0; i < 3; i++){
+                somaNotas += vetorNotas[i]
+            } 
+          return somaNotas / 3
+        }
       
-    mostrarMedia(media)
-
-
-
+        function mostrarMedia(media) {
+                alert(`Sua média é de: ${media.toFixed(2)}`)
+        }
+      
+        mostrarMedia(media)
     </script>
 </body>
 </html>
