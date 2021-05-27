@@ -8,6 +8,8 @@
 <body>
     <script>
         let vetorNotas = []
+        let somaNotas = 0
+        
         function notas() {
             for(let i = 0; i < 3; i++){
                 let numero = +prompt(`Digite a ${[i+1]}ª nota do aluno`)
@@ -15,6 +17,13 @@
             }
         } 
         notas()
+
+        function calcularMedia(){
+            for (let i = 0; i < 3; i++){
+                somaNotas += vetorNotas[i]
+            } return somaNotas / 3
+        }
+
     </script>
 </body>
 </html>
