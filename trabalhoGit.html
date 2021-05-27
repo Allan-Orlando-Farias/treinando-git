@@ -7,26 +7,27 @@
 </head>
 <body>
     <script>
-        let vetorNotas = []
-        let somaNotas = 0
-        
-        function notas() {
+        function cadastrarNotas() {
+            let vetorNotas = []
             for(let i = 0; i < 3; i++){
                 let numero = +prompt(`Digite a ${[i+1]}ª nota do aluno`)
                 vetorNotas[i] = numero
             }
+            return vetorNotas
         } 
-        notas()
+        let notas = cadastrarNotas()
 
-        function calcularMedia(){
+        function calcularMedia(notas){
+            let somaNotas = 0
             for (let i = 0; i < 3; i++){
-                somaNotas += vetorNotas[i]
+                somaNotas += notas[i]
             } 
           return somaNotas / 3
         }
-      
+        let media = calcularMedia(notas)
+        
         function mostrarMedia(media) {
-                alert(`Sua média é de: ${media.toFixed(2)}`)
+            alert(`Sua média é de: ${media.toFixed(2)}`)
         }
       
         mostrarMedia(media)
