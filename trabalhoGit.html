@@ -21,9 +21,15 @@
         function calcularMedia(){
             for (let i = 0; i < 3; i++){
                 somaNotas += vetorNotas[i]
-            } return somaNotas / 3
+            } 
+          return somaNotas / 3
         }
-
+      
+        function mostrarMedia(media) {
+                alert(`Sua média é de: ${media.toFixed(2)}`)
+        }
+      
+        mostrarMedia(media)
     </script>
 </body>
 </html>
