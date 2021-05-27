@@ -10,10 +10,11 @@
         let vetorNotas = []
         function notas() {
             for(let i = 0; i < 3; i++){
-                let numero = prompt(`Digite a ${[i+1]}ª nota do aluno`)
+                let numero = +prompt(`Digite a ${[i+1]}ª nota do aluno`)
                 vetorNotas[i] = numero
             }
         } 
+        notas()
     </script>
 </body>
 </html>
